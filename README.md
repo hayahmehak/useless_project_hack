@@ -1,103 +1,173 @@
-<img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
+# CHER.EXE 👗💻
 
-
-
-# [Project Name] 🎯
-
+> Your wardrobe. Digitized for absolutely no reason.
 
 ## Basic Details
-### Team Name: [Name]
 
+### Team Name
+WhyTech
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
 
-### Project Description
-[2-3 lines about what your project does]
-
-### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
-
-### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
-
-## Technical Details
-### Technologies/Components Used
-For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
-
-### Implementation
-For Software:
-# Installation
-[commands]
-
-# Run
-[commands]
-
-### Project Documentation
-For Software:
-
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
-
-## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Hayah Mehak - Govt Model Engineering College
+- Archana Mohan - Govt Model Engineering College
 
 ---
-Made with ❤️ at TinkerHub Useless Projects 
 
-![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
-![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
+## Project Description
 
+CHER.EXE is a deliberately useless digital fashion assistant.
 
+The application collects information about the user's wardrobe,
+occasion, preferences and environment, performs an unnecessarily
+complicated analysis, and ultimately generates an outfit that
+should be as unusable as possible.
 
+The more CHER.EXE understands about what the user needs,
+the worse its recommendation becomes.
+
+---
+
+## The Problem
+
+Humans already have closets.
+
+Humans can already see their clothes.
+
+Humans can already choose what to wear.
+
+We decided this process needed software.
+
+---
+
+## The Solution
+
+CHER.EXE turns the process of choosing an outfit into an
+unnecessarily elaborate digital experience.
+
+The application will eventually:
+
+- Digitize the user's wardrobe
+- Collect information about the occasion
+- Consider weather and environmental conditions
+- Learn the user's preferred aesthetic
+- Generate deliberately incompatible outfits
+- Calculate a "Uselessness Score"
+- Use AI to explain why the outfit is catastrophically unsuitable
+
+---
+
+## Current Progress
+
+### V0.1 — Initial Interface
+
+**Status: Completed ✅**
+
+The first version establishes the visual identity and basic
+interaction of CHER.EXE.
+
+Implemented:
+
+- Initial CHER.EXE landing page
+- Project branding
+- Basic responsive layout
+- "Enter My Closet" button
+- JavaScript interaction
+- Initial project structure
+
+---
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
+---
+
+## Planned Features
+
+### V0.2 — Visual Design
+- Improve CHER.EXE visual identity
+- Add animations and transitions
+- Create a more immersive interface
+
+### V0.3 — Digital Wardrobe
+- Upload clothing images
+- Categorize clothing
+- Store wardrobe items
+- Display clothing cards
+
+### V0.4 — Fashion Consultation
+- Select occasion
+- Select preferred aesthetic
+- Consider weather
+- Consider walking/activity requirements
+
+### V0.5 — Anti-Fashion Engine
+- Generate deliberately incompatible outfits
+- Calculate outfit incompatibility
+
+### V0.6 — Uselessness Score
+- Score the generated outfit
+- Explain individual incompatibilities
+
+### V0.7 — AI Fashion Saboteur
+- Use AI to analyse the generated outfit
+- Generate ridiculous but confident explanations
+
+### V0.8 — Chaos Mode
+- Maximize outfit incompatibility
+- Generate increasingly terrible combinations
+
+### V1.0 — Final Version
+- Final UI polish
+- Testing
+- Deployment
+- Documentation
+
+---
+
+## Project Status
+
+🚧 CHER.EXE is currently under development.
+
+Current version: **V0.1**
+
+---
+
+## Team Contributions
+
+### Hayah Mehak
+
+- Project concept
+- Website development
+- UI development
+
+### Archana Mohan
+
+- Documentation
+- UI development
+- Testing and Optimization
+
+---
+
+## Screenshots
+
+### V0.1 — Initial Interface
+
+[Add screenshot here]
+
+---
+
+## Demo
+
+Live demo will be added after deployment.
+
+---
+
+## Made For
+
+TinkerHub Useless Projects 3.0
+
+Made with questionable decisions and unnecessary technology. 💀
