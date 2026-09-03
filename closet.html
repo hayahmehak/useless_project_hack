@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>CHER.EXE — My Closet</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,97 +19,54 @@
         <h1>MY CLOSET</h1>
 
         <p class="closet-intro">
-            Because apparently choosing clothes needed software.
+            Digitizing your wardrobe because apparently looking inside the closet wasn't enough.
         </p>
-
 
         <section class="wardrobe-form">
 
             <h2>ADD A CLOTHING ITEM</h2>
 
-            <input
-                type="text"
-                id="clothingName"
+            <label class="upload-box">
+                <span id="uploadText">📸 CLICK TO ADD PHOTO</span>
+                <input 
+                    type="file" 
+                    id="clothingImage" 
+                    accept="image/*" 
+                    onchange="previewImage()"
+                >
+            </label>
+
+            <div id="imagePreview" class="image-preview"></div>
+
+            <input 
+                type="text" 
+                id="clothingName" 
                 placeholder="Clothing name..."
             >
 
             <select id="clothingCategory">
-
-                <option value="">
-                    Select category
-                </option>
-
-                <option value="Top">
-                    Top
-                </option>
-
-                <option value="Bottom">
-                    Bottom
-                </option>
-
-                <option value="Dress">
-                    Dress
-                </option>
-
-                <option value="Outerwear">
-                    Outerwear
-                </option>
-
-                <option value="Shoes">
-                    Shoes
-                </option>
-
-                <option value="Accessory">
-                    Accessory
-                </option>
-
+                <option value="">Select category</option>
+                <option value="Top">Top</option>
+                <option value="Bottom">Bottom</option>
+                <option value="Dress">Dress</option>
+                <option value="Outerwear">Outerwear</option>
+                <option value="Shoes">Shoes</option>
+                <option value="Accessory">Accessory</option>
             </select>
-
 
             <select id="clothingColor">
-
-                <option value="">
-                    Select colour
-                </option>
-
-                <option value="Black">
-                    Black
-                </option>
-
-                <option value="White">
-                    White
-                </option>
-
-                <option value="Pink">
-                    Pink
-                </option>
-
-                <option value="Blue">
-                    Blue
-                </option>
-
-                <option value="Red">
-                    Red
-                </option>
-
-                <option value="Green">
-                    Green
-                </option>
-
-                <option value="Yellow">
-                    Yellow
-                </option>
-
-                <option value="Brown">
-                    Brown
-                </option>
-
-                <option value="Other">
-                    Other
-                </option>
-
+                <option value="">Select colour</option>
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Pink">Pink</option>
+                <option value="Blue">Blue</option>
+                <option value="Red">Red</option>
+                <option value="Green">Green</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Brown">Brown</option>
+                <option value="Purple">Purple</option>
+                <option value="Other">Other</option>
             </select>
-
 
             <button onclick="addClothing()">
                 ADD TO CLOSET +
@@ -119,36 +74,22 @@
 
         </section>
 
-
         <section class="wardrobe-section">
 
             <div class="wardrobe-header">
-
                 <h2>MY CLOTHES</h2>
-
-                <span id="itemCount">
-                    0 ITEMS
-                </span>
-
+                <span id="itemCount">0 ITEMS</span>
             </div>
 
-
-            <div id="clothingGrid" class="clothing-grid">
-
-                </div>
+            <div id="clothingGrid" class="clothing-grid"></div>
 
         </section>
 
-
-        <button
-            class="back-button"
-            onclick="goBack()"
-        >
+        <button class="back-button" onclick="goBack()">
             ← BACK
         </button>
 
     </main>
-
 
     <script src="script.js"></script>
 

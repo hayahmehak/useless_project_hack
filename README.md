@@ -59,15 +59,15 @@ The application will eventually:
 
 ## Current Progress
 
-### V0.3 — Digital Wardrobe
+### V0.4 — Wardrobe Image Uploads
 
 **Status: Completed**
 
 Implemented:
-- Wardrobe input form (Name, Category, Colour)
-- Persistent clothing storage via browser `localStorage`
-- Dynamic item grid rendering and live counter
-- Card deletion workflow
+- Interactive photo file picker box
+- Live `FileReader` image preview during addition
+- Base64/Data URL and persistent storage of clothing photos
+- Dynamic fallback to visual icons when images are omitted
 
 ---
 
