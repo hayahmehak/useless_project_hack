@@ -357,3 +357,110 @@ button:hover {
     border-radius: 12px;
     margin-bottom: 20px;
 }
+
+/* ================================= */
+/* CONSULTATION                      */
+/* ================================= */
+
+.consult-page {
+    min-height: 100vh;
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 25px;
+    text-align: center;
+}
+
+.consult-page h1 {
+    font-size: clamp(55px, 10vw, 100px);
+    letter-spacing: -5px;
+    margin-top: 20px;
+}
+
+.consult-intro {
+    margin-top: 20px;
+    font-size: 18px;
+    opacity: 0.65;
+}
+
+/* QUESTION */
+.question-card {
+    margin-top: 35px;
+    padding: 30px;
+    text-align: left;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(45, 27, 46, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.question-number {
+    font-size: 11px;
+    letter-spacing: 3px;
+    opacity: 0.5;
+    margin-bottom: 10px;
+}
+
+.question-card h2 {
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+/* OPTIONS */
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.option {
+    width: 100%;
+    margin: 0;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #2d1b2e;
+    border: 1px solid rgba(45, 27, 46, 0.2);
+    cursor: pointer;
+}
+
+.option:hover {
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+/* SELECTED */
+.option.selected {
+    background: #2d1b2e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ANALYZE */
+.analyze-button {
+    margin-top: 45px;
+    padding: 18px 40px;
+    font-size: 14px;
+}
+
+.consult-error {
+    margin-top: 15px;
+    min-height: 20px;
+    font-size: 13px;
+    color: #8b304f;
+}
+
+/* CONSULT BUTTON */
+.consult-button {
+    margin-top: 20px;
+    padding: 18px 35px;
+    font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .option-grid {
+        grid-template-columns: 1fr;
+    }
+    .question-card {
+        padding: 22px;
+    }
+}

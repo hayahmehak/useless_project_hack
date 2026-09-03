@@ -156,3 +156,55 @@ function goBack() {
 if (document.getElementById("clothingGrid")) {
     displayWardrobe();
 }
+
+// ========================================
+// CONSULTATION
+// ========================================
+
+let consultation = {
+    occasion: "",
+    style: "",
+    weather: "",
+    walking: ""
+};
+
+// START CONSULTATION
+function startConsultation() {
+    window.location.href = "consult.html";
+}
+
+// SELECT OPTION
+function selectOption(type, value, button) {
+    consultation[type] = value;
+
+    const parent = button.parentElement;
+    const buttons = parent.querySelectorAll(".option");
+
+    buttons.forEach(function(btn) {
+        btn.classList.remove("selected");
+    });
+
+    button.classList.add("selected");
+}
+
+// ANALYZE
+function analyzeOutfit() {
+    const error = document.getElementById("consultError");
+
+    if (
+        consultation.occasion === "" ||
+        consultation.style === "" ||
+        consultation.weather === "" ||
+        consultation.walking === ""
+    ) {
+        error.textContent = "CHER.EXE: Please answer everything. I cannot judge you yet.";
+        return;
+    }
+
+    localStorage.setItem(
+        "cherConsultation",
+        JSON.stringify(consultation)
+    );
+
+    alert("Consultation saved successfully!");
+}

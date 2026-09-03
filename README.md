@@ -45,70 +45,66 @@ We decided this process needed software.
 CHER.EXE turns the process of choosing an outfit into an
 unnecessarily elaborate digital experience.
 
-The application will eventually:
+The application:
 
-- Digitize the user's wardrobe
-- Collect information about the occasion
-- Consider weather and environmental conditions
-- Learn the user's preferred aesthetic
-- Generate deliberately incompatible outfits
-- Calculate a "Uselessness Score"
-- Use AI to explain why the outfit is catastrophically unsuitable
+- Digitizes the user's wardrobe with image uploads and previews
+- Collects information about the occasion, style, weather, and walking requirements
+- Connects to the Grok API to deliberately generate incompatible outfits and analyze them
+- Calculates a "Uselessness Score"
+- Provides AI-generated sarcastic explanations of why the outfit is a disaster
 
 ---
 
-## Current Progress
+### Current Progress
+
+### V0.1 — Initial CHER.EXE
+- Established landing page, system status, and page identity.
+
+### V0.2 — Navigation & UI
+- Built multi-page navigation linking the landing page to the closet interface (`closet.html`).
+
+### V0.3 — Digital Wardrobe
+- Implemented functional clothing card management (Add/Delete/Counter) stored in `localStorage`.
 
 ### V0.4 — Wardrobe Image Uploads
+- Integrated file selection, live `FileReader` image previews, Base64 encoding, and fallback icon rendering.
+
+### V0.5 — CHER Consultation
 
 **Status: Completed**
 
 Implemented:
-- Interactive photo file picker box
-- Live `FileReader` image preview during addition
-- Base64/Data URL and persistent storage of clothing photos
-- Dynamic fallback to visual icons when images are omitted
-
----
+- Questionnaire interface (`consult.html`) tracking occasion, aesthetic, weather, and walking requirements
+- Click-to-select interactive option cards with active styling states
+- Form validation preventing progression if questions are unanswered
+- Persistent local storage of consultation data (`cherConsultation`)
 
 ## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
+- FileReader API
+- LocalStorage
+- xAI (Grok) API
 
 ---
 
 ## Planned Features
 
 
-### V0.4 — Fashion Consultation
-- Select occasion
-- Select preferred aesthetic
-- Consider weather
-- Consider walking/activity requirements
+### V0.6 — Outfit Recommendation Engine
+- Pull items from stored wardrobe and user consultation data
+- Generate unhinged outfit combinations
 
-### V0.5 — Anti-Fashion Engine
-- Generate deliberately incompatible outfits
-- Calculate outfit incompatibility
+### V0.7 — Grok AI Integration
+- Connect real-time LLM requests to dynamically sabotage outfits based on environmental inputs
 
-### V0.6 — Uselessness Score
-- Score the generated outfit
-- Explain individual incompatibilities
-
-### V0.7 — AI Fashion Saboteur
-- Use AI to analyse the generated outfit
-- Generate ridiculous but confident explanations
-
-### V0.8 — Chaos Mode
-- Maximize outfit incompatibility
-- Generate increasingly terrible combinations
+### V0.8 — CHER'S Verdict & Chaos Mode
+- Output AI-generated fashion crimes, uselessness scores, and random chaos messages
 
 ### V1.0 — Final Version
-- Final UI polish
-- Testing
-- Deployment
-- Documentation
+- Final UI polish, testing, deployment, and documentation
 
 ---
 
@@ -116,7 +112,7 @@ Implemented:
 
 🚧 CHER.EXE is currently under development.
 
-Current version: **V0.3**
+Current version: **V0.5**
 
 ---
 

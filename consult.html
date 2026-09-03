@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHER.EXE — Consultation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="consult-page">
+
+        <p class="system-status">
+            CHER.EXE // FASHION CONSULTATION
+        </p>
+
+        <h1>CONSULT CHER</h1>
+
+        <p class="consult-intro">
+            Tell me everything.
+            I will probably make the wrong decision.
+        </p>
+
+        <!-- QUESTION 1 -->
+        <section class="question-card">
+            <p class="question-number">01</p>
+            <h2>Where are you going?</h2>
+            <div class="option-grid">
+                <button class="option" onclick="selectOption('occasion', 'College', this)">🎓 College</button>
+                <button class="option" onclick="selectOption('occasion', 'Party', this)">🪩 Party</button>
+                <button class="option" onclick="selectOption('occasion', 'Date', this)">💌 Date</button>
+                <button class="option" onclick="selectOption('occasion', 'Casual', this)">☕ Casual</button>
+            </div>
+        </section>
+
+        <!-- QUESTION 2 -->
+        <section class="question-card">
+            <p class="question-number">02</p>
+            <h2>What's your aesthetic?</h2>
+            <div class="option-grid">
+                <button class="option" onclick="selectOption('style', 'Preppy', this)">🎀 Preppy</button>
+                <button class="option" onclick="selectOption('style', 'Casual', this)">👟 Casual</button>
+                <button class="option" onclick="selectOption('style', 'Y2K', this)">💿 Y2K</button>
+                <button class="option" onclick="selectOption('style', 'Elegant', this)">✨ Elegant</button>
+            </div>
+        </section>
+
+        <!-- QUESTION 3 -->
+        <section class="question-card">
+            <p class="question-number">03</p>
+            <h2>What's the weather like?</h2>
+            <div class="option-grid">
+                <button class="option" onclick="selectOption('weather', 'Sunny', this)">☀️ Sunny</button>
+                <button class="option" onclick="selectOption('weather', 'Cloudy', this)">☁️ Cloudy</button>
+                <button class="option" onclick="selectOption('weather', 'Rainy', this)">🌧️ Rainy</button>
+                <button class="option" onclick="selectOption('weather', 'Hot', this)">🔥 Very Hot</button>
+            </div>
+        </section>
+
+        <!-- QUESTION 4 -->
+        <section class="question-card">
+            <p class="question-number">04</p>
+            <h2>How much walking are you doing?</h2>
+            <div class="option-grid">
+                <button class="option" onclick="selectOption('walking', 'Low', this)">🛋️ Barely any</button>
+                <button class="option" onclick="selectOption('walking', 'Medium', this)">🚶 Some</button>
+                <button class="option" onclick="selectOption('walking', 'High', this)">🏃 A LOT</button>
+            </div>
+        </section>
+
+        <!-- ANALYZE -->
+        <button class="analyze-button" onclick="analyzeOutfit()">
+            ANALYZE MY LIFE →
+        </button>
+
+        <p id="consultError" class="consult-error"></p>
+
+        <button class="back-button" onclick="goBack()">
+            ← BACK TO CLOSET
+        </button>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
