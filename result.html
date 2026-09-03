@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHER.EXE — The Verdict</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="result-page">
+
+        <p class="system-status">
+            CHER.EXE // AI SABOTEUR ENGINE
+        </p>
+
+        <h1>THE VERDICT</h1>
+
+        <!-- LOADING STATE -->
+        <div id="loadingScreen" class="loading-screen">
+            <p class="loading-text">Consulting Grok to ruin your outfit...</p>
+        </div>
+
+        <!-- RESULT CONTAINER -->
+        <div id="resultContainer" class="result-container" style="display: none;">
+            
+            <div id="outfitDisplay" class="clothing-grid">
+                <!-- Sabotaged items render here -->
+            </div>
+
+            <section class="score-card">
+                <h2>USELESSNESS SCORE</h2>
+                <div id="uselessnessScore" class="score-display">0/100</div>
+                <p id="aiVerdict" class="verdict-text"></p>
+            </section>
+
+        </div>
+
+        <div class="action-buttons">
+            <button onclick="location.reload()">RE-SABOTAGE (MAKE IT WORSE)</button>
+            <button class="back-button" onclick="window.location.href='closet.html'">← BACK TO CLOSET</button>
+        </div>
+
+    </main>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
