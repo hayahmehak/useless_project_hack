@@ -59,21 +59,15 @@ The application will eventually:
 
 ## Current Progress
 
-### V0.1 — Initial Interface
+### V0.3 — Digital Wardrobe
 
-**Status: Completed ✅**
-
-The first version establishes the visual identity and basic
-interaction of CHER.EXE.
+**Status: Completed**
 
 Implemented:
-
-- Initial CHER.EXE landing page
-- Project branding
-- Basic responsive layout
-- "Enter My Closet" button
-- JavaScript interaction
-- Initial project structure
+- Wardrobe input form (Name, Category, Colour)
+- Persistent clothing storage via browser `localStorage`
+- Dynamic item grid rendering and live counter
+- Card deletion workflow
 
 ---
 
@@ -87,16 +81,6 @@ Implemented:
 
 ## Planned Features
 
-### V0.2 — Visual Design
-- Improve CHER.EXE visual identity
-- Add animations and transitions
-- Create a more immersive interface
-
-### V0.3 — Digital Wardrobe
-- Upload clothing images
-- Categorize clothing
-- Store wardrobe items
-- Display clothing cards
 
 ### V0.4 — Fashion Consultation
 - Select occasion
@@ -132,7 +116,7 @@ Implemented:
 
 🚧 CHER.EXE is currently under development.
 
-Current version: **V0.1**
+Current version: **V0.3**
 
 ---
 
@@ -154,7 +138,7 @@ Current version: **V0.1**
 
 ## Screenshots
 
-### V0.1 — Initial Interface
+### V0.3 — Initial Interface
 
 [Add screenshot here]
 

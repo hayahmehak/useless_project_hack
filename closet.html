@@ -1,31 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CHER.EXE — My Closet</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <main class="closet-page">
-        <p class="system-status">SYSTEM ONLINE // CHER.EXE</p>
-        
-        <h1>MY CLOSET</h1>
-        
-        <p class="closet-intro">
-            Welcome to your extremely unnecessary digital wardrobe.
+
+        <p class="system-status">
+            CHER.EXE // WARDROBE DATABASE
         </p>
 
-        <div class="empty-closet">
-            <div class="hanger">👗</div>
-            <h2>Your closet is empty.</h2>
-            <p>Which means we currently have absolutely nothing to judge.</p>
-            <button onclick="addClothes()">ADD MY CLOTHES</button>
-        </div>
+        <h1>MY CLOSET</h1>
 
-        <button class="back-button" onclick="goBack()">← BACK</button>
+        <p class="closet-intro">
+            Because apparently choosing clothes needed software.
+        </p>
+
+
+        <section class="wardrobe-form">
+
+            <h2>ADD A CLOTHING ITEM</h2>
+
+            <input
+                type="text"
+                id="clothingName"
+                placeholder="Clothing name..."
+            >
+
+            <select id="clothingCategory">
+
+                <option value="">
+                    Select category
+                </option>
+
+                <option value="Top">
+                    Top
+                </option>
+
+                <option value="Bottom">
+                    Bottom
+                </option>
+
+                <option value="Dress">
+                    Dress
+                </option>
+
+                <option value="Outerwear">
+                    Outerwear
+                </option>
+
+                <option value="Shoes">
+                    Shoes
+                </option>
+
+                <option value="Accessory">
+                    Accessory
+                </option>
+
+            </select>
+
+
+            <select id="clothingColor">
+
+                <option value="">
+                    Select colour
+                </option>
+
+                <option value="Black">
+                    Black
+                </option>
+
+                <option value="White">
+                    White
+                </option>
+
+                <option value="Pink">
+                    Pink
+                </option>
+
+                <option value="Blue">
+                    Blue
+                </option>
+
+                <option value="Red">
+                    Red
+                </option>
+
+                <option value="Green">
+                    Green
+                </option>
+
+                <option value="Yellow">
+                    Yellow
+                </option>
+
+                <option value="Brown">
+                    Brown
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <button onclick="addClothing()">
+                ADD TO CLOSET +
+            </button>
+
+        </section>
+
+
+        <section class="wardrobe-section">
+
+            <div class="wardrobe-header">
+
+                <h2>MY CLOTHES</h2>
+
+                <span id="itemCount">
+                    0 ITEMS
+                </span>
+
+            </div>
+
+
+            <div id="clothingGrid" class="clothing-grid">
+
+                </div>
+
+        </section>
+
+
+        <button
+            class="back-button"
+            onclick="goBack()"
+        >
+            ← BACK
+        </button>
+
     </main>
 
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
