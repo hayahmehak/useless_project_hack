@@ -1,7 +1,15 @@
 function enterCloset() {
+    window.location.href = "closet.html";
+}
+
+function goBack() {
+    window.location.href = "index.html";
+}
+
+function addClothes() {
     alert(
-        "WELCOME TO CHER.EXE 👗\n\n" +
-        "Your wardrobe is currently empty.\n\n" +
-        "Which is honestly tragic."
+        "CLOSET DATABASE\n\n" +
+        "Clothing upload system coming soon.\n\n" +
+        "Please remain fashionable."
     );
 }

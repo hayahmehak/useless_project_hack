@@ -6,71 +6,164 @@
 
 body {
     min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: #f7d9e8;
+    background: 
+        radial-gradient(circle at top left, #fff0f7, transparent 35%),
+        radial-gradient(circle at bottom right, #e9d5ff, transparent 35%),
+        #f7d9e8;
     color: #2d1b2e;
-
     font-family: Arial, sans-serif;
 }
 
+/* LANDING PAGE */
+
 .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 40px;
 }
 
 .system-status {
-    font-size: 12px;
-    letter-spacing: 3px;
-    opacity: 0.6;
-
+    font-size: 11px;
+    letter-spacing: 4px;
+    opacity: 0.55;
     margin-bottom: 25px;
 }
 
-h1 {
-    font-size: clamp(70px, 15vw, 150px);
-    letter-spacing: -8px;
-    line-height: 0.9;
+.hero h1 {
+    font-size: clamp(70px, 15vw, 160px);
+    letter-spacing: -9px;
+    line-height: 0.85;
+    animation: appear 1s ease;
 }
 
-h1 span {
+.hero h1 span {
     font-weight: 300;
 }
 
 .tagline {
     margin-top: 35px;
-
     font-size: 20px;
     line-height: 1.6;
+    opacity: 0.8;
 }
 
 button {
     margin-top: 35px;
-
     padding: 16px 30px;
-
     border: 2px solid #2d1b2e;
+    border-radius: 4px;
     background: #2d1b2e;
     color: white;
-
-    font-size: 14px;
-    letter-spacing: 1px;
-
+    font-size: 13px;
+    letter-spacing: 1.5px;
     cursor: pointer;
-
-    transition: 0.2s ease;
+    transition: all 0.25s ease;
 }
 
 button:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(45, 27, 46, 0.2);
 }
 
 .quote {
     margin-top: 25px;
-
     font-style: italic;
-    opacity: 0.6;
+    opacity: 0.5;
+}
+
+/* CLOSET PAGE */
+
+.closet-page {
+    min-height: 100vh;
+    padding: 40px 8%;
+    text-align: center;
+}
+
+.closet-page h1 {
+    font-size: clamp(50px, 10vw, 100px);
+    letter-spacing: -5px;
+    margin-top: 20px;
+}
+
+.closet-intro {
+    margin-top: 20px;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.empty-closet {
+    max-width: 600px;
+    margin: 70px auto 30px;
+    padding: 70px 30px;
+    border: 1px solid rgba(45, 27, 46, 0.2);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 50px rgba(45, 27, 46, 0.08);
+}
+
+.hanger {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #2d1b2e;
+    border-radius: 50%;
+    font-size: 35px;
+}
+
+.empty-closet h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.empty-closet p {
+    line-height: 1.6;
+    opacity: 0.65;
+}
+
+.back-button {
+    background: transparent;
+    color: #2d1b2e;
+    margin-top: 10px;
+}
+
+/* ANIMATION */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 25px;
+    }
+    .hero h1 {
+        letter-spacing: -5px;
+    }
+    .tagline {
+        font-size: 17px;
+    }
+    .closet-page {
+        padding: 40px 20px;
+    }
+    .empty-closet {
+        margin-top: 45px;
+        padding: 50px 20px;
+    }
 }
