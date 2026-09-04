@@ -23,9 +23,6 @@ occasion, preferences and environment, performs an unnecessarily
 complicated analysis, and ultimately generates an outfit that
 should be as unusable as possible.
 
-The more CHER.EXE understands about what the user needs,
-the worse its recommendation becomes.
-
 ---
 
 ## The Problem
@@ -49,7 +46,7 @@ The application:
 
 - Digitizes the user's wardrobe with image uploads and previews
 - Collects information about the occasion, style, weather, and walking requirements
-- Connects to the Grok API to deliberately generate incompatible outfits and analyze them
+- Connects to the AI API to deliberately generate incompatible outfits and analyze them
 - Calculates a "Uselessness Score"
 - Provides AI-generated sarcastic explanations of why the outfit is a good idea(never)
 
@@ -82,8 +79,10 @@ The application:
 - Connect real-time LLM requests to dynamically sabotage outfits based on environmental inputs
 
 ### V0.8 — Updation
-- Updation of ai prompt,Questionnare addition, final optimization
+- Updation of ai prompt,questionnare addition, final optimization
 
+### V1.0 — Final Version
+- Final UI polish, testing, deployment, and documentation
 
 
 **Status: Completed**
@@ -98,21 +97,15 @@ The application:
 - LocalStorage
 - xAI API
 
----
-
-## Planned Features
-
-
-### V1.0 — Final Version
-- Final UI polish, testing, deployment, and documentation
+-
 
 ---
 
 ## Project Status
 
-🚧 CHER.EXE is currently under development.
+🚧 CHER.EXE is currently successfully deployed.
 
-Current version: **V0.8**
+Current version: **V1.0**
 
 ---
 
@@ -134,15 +127,12 @@ Current version: **V0.8**
 
 ## Screenshots
 
-### V0.8 — Initial Interface
-
-[Add screenshot here]
-
+https://drive.google.com/drive/folders/1UwAJ6vBEPy0nhMeBbTtCmvffFh_4ljkS?usp=drive_link
 ---
 
 ## Demo
 
-Live demo will be added after deployment.
+https://drive.google.com/drive/folders/1oQmjIpn-q0K1x0KSKuGN4GVL2qq9idUY?usp=drive_link
 
 ---
 
