@@ -51,7 +51,7 @@ The application:
 - Collects information about the occasion, style, weather, and walking requirements
 - Connects to the Grok API to deliberately generate incompatible outfits and analyze them
 - Calculates a "Uselessness Score"
-- Provides AI-generated sarcastic explanations of why the outfit is a disaster
+- Provides AI-generated sarcastic explanations of why the outfit is a good idea(never)
 
 ---
 
@@ -70,14 +70,17 @@ The application:
 - Integrated file selection, live `FileReader` image previews, Base64 encoding, and fallback icon rendering.
 
 ### V0.5 — CHER Consultation
+- Questionnaire interface (`consult.html`) tracking occasion, aesthetic, weather, and walking requirements
+- Form validation preventing progression if questions are unanswered
+- Persistent local storage of consultation data (`cherConsultation`)
+
+### V0.6 — Outfit Recommendation Engine
+- Pull items from stored wardrobe and user consultation data
+- Generate unhinged outfit combinations
+
 
 **Status: Completed**
 
-Implemented:
-- Questionnaire interface (`consult.html`) tracking occasion, aesthetic, weather, and walking requirements
-- Click-to-select interactive option cards with active styling states
-- Form validation preventing progression if questions are unanswered
-- Persistent local storage of consultation data (`cherConsultation`)
 
 ## Technologies Used
 
@@ -86,18 +89,14 @@ Implemented:
 - JavaScript
 - FileReader API
 - LocalStorage
-- xAI (Grok) API
+- xAI API
 
 ---
 
 ## Planned Features
 
 
-### V0.6 — Outfit Recommendation Engine
-- Pull items from stored wardrobe and user consultation data
-- Generate unhinged outfit combinations
-
-### V0.7 — Grok AI Integration
+### V0.7 — AI Integration
 - Connect real-time LLM requests to dynamically sabotage outfits based on environmental inputs
 
 ### V0.8 — CHER'S Verdict & Chaos Mode
@@ -112,7 +111,7 @@ Implemented:
 
 🚧 CHER.EXE is currently under development.
 
-Current version: **V0.5**
+Current version: **V0.7**
 
 ---
 
@@ -134,7 +133,7 @@ Current version: **V0.5**
 
 ## Screenshots
 
-### V0.3 — Initial Interface
+### V0.7 — Initial Interface
 
 [Add screenshot here]
 

@@ -464,3 +464,19 @@ button:hover {
         padding: 22px;
     }
 }
+
+/* Add padding to the body so content doesn't hug the screen edges */
+body {
+    padding: 2rem;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Make the back button floating and fixed to the top-left corner */
+.back-button {
+    position: fixed;
+    top: 0.8rem;
+    right: 1.5rem;
+    z-index: 1000;
+    /* Keeps it elevated over images and cards */
+}

@@ -208,7 +208,7 @@ function analyzeOutfit() {
     // Clear any previous error messages if validation passes
     error.textContent = "";
 
-    // Save user answers to localStorage for Grok to read on result.html
+    // Save user answers to localStorage for Gemini to read on result.html
     localStorage.setItem(
         "cherConsultation",
         JSON.stringify(consultation)
@@ -219,11 +219,7 @@ function analyzeOutfit() {
 }
 
 // ========================================
-// V0.6 — GEMINI AI SABOTEUR ENGINE
-// ========================================
-
-// ========================================
-// V0.6 — OPTIMIZED GEMINI AI SABOTEUR ENGINE
+// V0.8 — GEMINI AI SABOTEUR ENGINE WITH OFFLINE FALLBACK
 // ========================================
 
 async function callGrokSaboteur() {
@@ -256,25 +252,31 @@ async function callGrokSaboteur() {
         name: item.name,
         category: item.category,
         color: item.color
-    }));
+    })).sort(() => Math.random() - 0.5); 
 
+    const randomSeed = Math.floor(Math.random() * 1000000);
     const prompt = `You are CHER.EXE, a brutally sarcastic digital fashion saboteur inspired by Clueless. 
     The user's available wardrobe is: ${JSON.stringify(aiWardrobe)}. 
     Their constraints: going to ${consultation.occasion}, wanting a ${consultation.style} look, weather is ${consultation.weather}, and doing ${consultation.walking} walking.
     
-    Task: Select 4 item IDs from their wardrobe that make the ABSOLUTE WORST, most catastrophically mismatched combination possible. 
+    Random Chaos Seed: ${randomSeed}
+    
+    Task: Select up to 4 item IDs from their wardrobe that make the ABSOLUTE WORST, most catastrophically mismatched combination possible. Be extremely creative, chaotic, and unpredictable in your mismatching.
     Return a strict JSON object with these keys:
     1. "selectedItemIds": an array of numbers matching the IDs of the chosen items.
     2. "score": an integer score from 0 to 100 representing the total uselessness.
-    3. "verdict": a biting, sarcastic 1-2 sentence roast explaining why this outfit is a disaster.
+    3. "verdict": a biting, highly creative and entirely unpredictable 1-2 sentence roast explaining why this outfit is a disaster.
     
     Return ONLY valid JSON with no extra markdown text.`;
 
+    let result;
+
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${CONFIG.GEMINI_API_KEY}`, {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "x-goog-api-key": CONFIG.GEMINI_API_KEY
             },
             body: JSON.stringify({
                 contents: [
@@ -294,46 +296,52 @@ async function callGrokSaboteur() {
         const data = await response.json();
         
         if (!data.candidates || !data.candidates[0].content) {
-            console.error("Gemini API Error Response:", data);
-            throw new Error(data.error?.message || "Invalid Gemini response structure");
+            throw new Error(data.error?.message || "Quota limit or invalid response structure");
         }
 
         const content = data.candidates[0].content.parts[0].text;
-        const result = JSON.parse(content);
-
-        loadingScreen.style.display = "none";
-        resultContainer.style.display = "block";
-
-        const chosenItems = rawWardrobe.filter(item => result.selectedItemIds.includes(item.id));
-        
-        outfitDisplay.innerHTML = "";
-        
-        const itemsToRender = chosenItems.length > 0 ? chosenItems : rawWardrobe.slice(0, 2);
-
-        itemsToRender.forEach(item => {
-            const card = document.createElement("div");
-            card.className = "clothing-card";
-            const imageHTML = item.image 
-                ? `<img class="clothing-image" src="${item.image}" alt="${item.name}">`
-                : `<div class="clothing-icon">♡</div>`;
-            card.innerHTML = `
-                ${imageHTML}
-                <div class="clothing-info">
-                    <h3>${item.name}</h3>
-                    <p>${item.category}</p>
-                    <span>${item.color}</span>
-                </div>
-            `;
-            outfitDisplay.appendChild(card);
-        });
-
-        uselessnessScore.textContent = (result.score || 99) + "/100";
-        aiVerdict.textContent = result.verdict || "This outfit is an absolute hate crime against fashion.";
+        result = JSON.parse(content);
 
     } catch (error) {
-        console.error("Gemini Execution Error:", error);
-        loadingScreen.innerHTML = `<p>CHER.EXE crashed: ${error.message}. Check your API key or wait a minute for the quota reset.</p>`;
+        console.warn("API quota/limit hit or network error. Activating offline sabotage fallback:", error);
+        
+        // OFFLINE FALLBACK: Keeps demo alive locally when API rate limits trip
+        const fallbackCount = Math.min(rawWardrobe.length, 3);
+        const randomItems = [...rawWardrobe].sort(() => 0.5 - Math.random()).slice(0, fallbackCount);
+        
+        result = {
+            selectedItemIds: randomItems.map(i => i.id),
+            score: 99,
+            verdict: "Even my circuits are rejecting this outfit, and API rate limits couldn't save you from this absolute fashion crime."
+        };
     }
+
+    loadingScreen.style.display = "none";
+    resultContainer.style.display = "block";
+
+    const chosenItems = rawWardrobe.filter(item => result.selectedItemIds.includes(item.id));
+    const itemsToRender = chosenItems.length > 0 ? chosenItems : rawWardrobe.slice(0, 2);
+    
+    outfitDisplay.innerHTML = "";
+    itemsToRender.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "clothing-card";
+        const imageHTML = item.image 
+            ? `<img class="clothing-image" src="${item.image}" alt="${item.name}">`
+            : `<div class="clothing-icon">♡</div>`;
+        card.innerHTML = `
+            ${imageHTML}
+            <div class="clothing-info">
+                <h3>${item.name}</h3>
+                <p>${item.category}</p>
+                <span>${item.color}</span>
+            </div>
+        `;
+        outfitDisplay.appendChild(card);
+    });
+
+    uselessnessScore.textContent = (result.score || 99) + "/100";
+    aiVerdict.textContent = result.verdict;
 }
 
 // Auto-trigger when result.html loads
