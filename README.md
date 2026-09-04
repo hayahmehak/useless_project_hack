@@ -78,6 +78,13 @@ The application:
 - Pull items from stored wardrobe and user consultation data
 - Generate unhinged outfit combinations
 
+### V0.7 — AI Integration
+- Connect real-time LLM requests to dynamically sabotage outfits based on environmental inputs
+
+### V0.8 — Updation
+- Updation of ai prompt,Questionnare addition, final optimization
+
+
 
 **Status: Completed**
 
@@ -96,12 +103,6 @@ The application:
 ## Planned Features
 
 
-### V0.7 — AI Integration
-- Connect real-time LLM requests to dynamically sabotage outfits based on environmental inputs
-
-### V0.8 — CHER'S Verdict & Chaos Mode
-- Output AI-generated fashion crimes, uselessness scores, and random chaos messages
-
 ### V1.0 — Final Version
 - Final UI polish, testing, deployment, and documentation
 
@@ -111,7 +112,7 @@ The application:
 
 🚧 CHER.EXE is currently under development.
 
-Current version: **V0.7**
+Current version: **V0.8**
 
 ---
 
@@ -133,7 +134,7 @@ Current version: **V0.7**
 
 ## Screenshots
 
-### V0.7 — Initial Interface
+### V0.8 — Initial Interface
 
 [Add screenshot here]
 
